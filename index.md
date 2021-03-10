@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +14,7 @@
 <div class="entry-content">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</p>
+
 <h3>Apex Legends RP calculator - Season 8</h3>
 <p>This is a rank score RP calculator. You can check how many point you can get in the ranked match.</p>
 <p> </p>
