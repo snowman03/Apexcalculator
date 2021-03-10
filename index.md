@@ -1,2 +1,91 @@
-## Welcome to GitHub Pages
-snowdrew122
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Legends RP calculator - Season 8</title>
+
+<link rel="stylesheet" href="/css.css">
+<script defer src="/main.js"></script>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+</head>
+
+<div class="entry-content">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</p>
+<h3>Apex Legends RP calculator - Season 8</h3>
+<p>This is a rank score RP calculator. You can check how many point you can get in the ranked match.</p>
+<p> </p>
+<p>Kill <input id="kill2" type="number" />
+<br />
+Assist <input id="assist2" type="number" />
+</p>
+<p>Placement <select id="palcement">
+<option value="0">14+</option>
+<option value="1">13</option>
+<option value="2">12</option>
+<option value="3">11</option>
+<option value="4">10</option>
+<option value="5">9</option>
+<option value="6">8</option>
+<option value="7">7</option>
+<option value="8">6</option>
+<option value="9">5</option>
+<option value="10">4</option>
+<option value="11">3</option>
+<option value="12">2</option>
+<option value="13">1</option>
+</select><br />Rank <select id="rank">
+<option value="0">Bronze</option>
+<option value="12">Silver</option>
+<option value="24">Gold</option>
+<option value="36">Platinum</option>
+<option value="48">Diamond</option>
+<option value="60">Predator</option>
+</select>
+
+<br>
+<br>
+<input id="sum_button" type="button" value="Calculate" />
+<p>
+<br /> <h3>Total RP = <span id="total"></span><br /> </h3>
+
+<!-- <input id="sum_button" type="button" value="Run" /></p> -->
+<p><br>
+
+<script type="text/javascript">
+// <![CDATA[
+$(function() {
+    let add = function(a, b) {
+        return Number(a) + Number(b);
+    };
+
+    $('#sum_button').click(function() {
+         let array1 = new Array(0,5,5,5,10,10,20,20,30,30,40,40,60,100);
+         let array2 = new Array(10,10,10,10,12,12,12,12,12,15,15,20,20,25);
+         let a = $('#kill2').val();
+         let b = $('#assist2').val();
+         let c = document.getElementById("palcement").value;
+         let d = document.getElementById("rank").value;
+         let res = Math.min(add(a, b),6);
+         res = Math.max(res,0);
+         let res2 = res*array2[c] + array1[c] - d;
+        $('#total').text(res2);
+    });
+});
+// ]]>
+
+</script>
+
+<div> </div>
+<p> </p>
+<p>2021</p>
+    
+
+  
+</div>
+
+</html>
